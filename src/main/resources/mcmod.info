@@ -1,0 +1,21 @@
+[
+{
+  "modid": "letsmodagain",
+  "name": "Lets Mod Again",
+  "description": "This mod does basically nothing!",
+  "version": "1.0",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "LordofDorknes"
+  ],
+  "credits": "Thanks for the tutorials, Pahimar!",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
