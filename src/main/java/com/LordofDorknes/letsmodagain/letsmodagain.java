@@ -1,6 +1,5 @@
 package com.LordofDorknes.letsmodagain;
-import com.LordofDorknes.letsmodagain.configuration.ConfigurationHandler;
-import com.LordofDorknes.letsmodagain.item.ItemFleshPile;
+import com.LordofDorknes.letsmodagain.handler.ConfigurationHandler;
 import com.LordofDorknes.letsmodagain.reference.Reference;
 import com.LordofDorknes.letsmodagain.proxy.IProxy;
 import cpw.mods.fml.common.Mod;
@@ -8,15 +7,12 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
 
 /**
  * Created by Robert on 6/29/2014.
  */
 //                                         Here is a Mod, there are many like it, but here are some of its parameters.
-@Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version = Reference.VERSION)
+@Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version = Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class letsmodagain {
     //                                                                          Instantiate the mod plz
     @Mod.Instance(Reference.MOD_ID)
