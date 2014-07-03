@@ -2,6 +2,8 @@ package com.LordofDorknes.letsmodagain;
 import com.LordofDorknes.letsmodagain.handler.ConfigurationHandler;
 import com.LordofDorknes.letsmodagain.reference.Reference;
 import com.LordofDorknes.letsmodagain.proxy.IProxy;
+import com.LordofDorknes.letsmodagain.utility.LogHelper;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -26,7 +28,8 @@ public class letsmodagain {
     public void preInit(FMLPreInitializationEvent event)//              Before going any further, what do I need to do?
     {
     ConfigurationHandler.init(event.getSuggestedConfigurationFile());// You need to load the config!
-
+        FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+        LogHelper.info("Pre Initialization Complete");
 
     };
 
@@ -34,14 +37,14 @@ public class letsmodagain {
    public void init(FMLInitializationEvent event)//                     Okay, Time to initiate. What do I need to do?
    {
 
-
+       LogHelper.info("Initialization Complete");
    }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event)//        Okay, what do I need to do last before being ready?
     {
 
-
+        LogHelper.info("Post Initialization Complete");
     };
 
 }//                                                                 kthxbye
