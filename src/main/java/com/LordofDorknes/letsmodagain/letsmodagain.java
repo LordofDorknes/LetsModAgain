@@ -9,6 +9,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import com.LordofDorknes.letsmodagain.init.*;
 
 /**
  * Created by Robert on 6/29/2014.
@@ -28,14 +29,30 @@ public class letsmodagain {
     public void preInit(FMLPreInitializationEvent event)//              Before going any further, what do I need to do?
     {
     ConfigurationHandler.init(event.getSuggestedConfigurationFile());// You need to load the config!
-        FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
-        LogHelper.info("Pre Initialization Complete");
+        FMLCommonHandler.instance().bus().register(new ConfigurationHandler());//this is a config handler, register its existence
 
+
+        //PacketHandler.init();
+
+        //proxy.registerKeybindings();
+
+        ModItems.init();
+
+        //ModBlocks.init();
+        LogHelper.info("Pre Initialization Complete");
     };
 
    @Mod.EventHandler
    public void init(FMLInitializationEvent event)//                     Okay, Time to initiate. What do I need to do?
    {
+       // Register the GUI Handler
+       // Initialize mod tile entities
+       // Initialize custom rendering and pre-load textures (Client only)
+       // Register the Items Event Handler
+       //Init craftingHandler
+       //Register Fuels
+       //Init Recipes
+
 
        LogHelper.info("Initialization Complete");
    }
