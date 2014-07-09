@@ -37,6 +37,7 @@ public class letsmodagain {
         //proxy.registerKeybindings();
 
         ModItems.init();
+        ModBlocks.init();
 
         //ModBlocks.init();
         LogHelper.info("Pre Initialization Complete");

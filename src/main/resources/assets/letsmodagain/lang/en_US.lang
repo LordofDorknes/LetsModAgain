@@ -1,1 +1,3 @@
-item.fleshPile.name=Flesh Pile
+
+item.letsmodagain:fleshPile.name=Flesh Pile
+tile.letsmodagain:fleshHeap.name=Flesh Heap
