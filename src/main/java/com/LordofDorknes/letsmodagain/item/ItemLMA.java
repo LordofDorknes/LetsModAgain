@@ -1,4 +1,5 @@
 package com.LordofDorknes.letsmodagain.item;
+import com.LordofDorknes.letsmodagain.creativetab.CreativeTabLMA;
 import com.LordofDorknes.letsmodagain.reference.Textures;
 import com.LordofDorknes.letsmodagain.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
@@ -15,6 +16,7 @@ public class ItemLMA extends Item {
 
     public ItemLMA(){
     super();
+        this.setCreativeTab(CreativeTabLMA.TAB_LMA);
         //setTextureName(Reference.MOD_ID + ":" +this.getClass().getSimpleName()); // would this change for each item to "MOD_ID:WhateverItemClass?" or will it give ItemLMA?
         //this.setUnlocalizedName("Unnamed LMA Item"); //this would appear to overwrite any name given by an item extending this and make it unable to be found by forge
     }

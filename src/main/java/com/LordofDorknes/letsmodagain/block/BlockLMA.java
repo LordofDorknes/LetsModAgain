@@ -1,5 +1,6 @@
 package com.LordofDorknes.letsmodagain.block;
 
+import com.LordofDorknes.letsmodagain.creativetab.CreativeTabLMA;
 import com.LordofDorknes.letsmodagain.reference.Textures;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -14,9 +15,11 @@ public class BlockLMA extends Block {
 
         public BlockLMA(Material material){
             super(material);
+            this.setCreativeTab(CreativeTabLMA.TAB_LMA);
         }
     public BlockLMA(){
         this(Material.rock);
+        this.setCreativeTab(CreativeTabLMA.TAB_LMA);
     }
 
 
